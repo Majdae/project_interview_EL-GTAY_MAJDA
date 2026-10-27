@@ -1,0 +1,9 @@
+{
+  "action": "preferences",
+  "overrides": {
+    "recent_limit": 0,
+    "appearance": {
+      "show_grid": false
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+  <cloud-backup>
+    <include domain="file" path="catalog/" />
+    <include domain="sharedpref" path="appearance.xml" />
+    <exclude domain="file" path="catalog/private/" />
+  </cloud-backup>
+  <device-transfer>
+    <include domain="database" path="catalog.db" />
+    <include domain="sharedpref" path="appearance.xml" />
+    <exclude domain="sharedpref" path="session.xml" />
+  </device-transfer>
+</data-extraction-rules>

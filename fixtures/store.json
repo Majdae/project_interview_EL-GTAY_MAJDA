@@ -1,0 +1,159 @@
+{
+  "extensions": [
+    {
+      "extension_id": "inkframe",
+      "enabled": true,
+      "capabilities": [
+        "canvas.read",
+        "palette.write"
+      ],
+      "update_source": "bundled",
+      "name": "Ink Frame"
+    },
+    {
+      "extension_id": "rulerleaf",
+      "enabled": true,
+      "capabilities": [
+        "canvas.read"
+      ],
+      "update_source": "bundled",
+      "name": "Ruler Leaf"
+    },
+    {
+      "extension_id": "duskswatch",
+      "enabled": false,
+      "capabilities": [
+        "canvas.read"
+      ],
+      "update_source": "bundled",
+      "name": "Dusk Swatch"
+    }
+  ],
+  "catalog_policy": {
+    "known_capabilities": [
+      "canvas.read",
+      "palette.write",
+      "clipboard.read"
+    ],
+    "banned_capabilities": [
+      "clipboard.read"
+    ],
+    "update_sources": [
+      "bundled"
+    ]
+  },
+  "profiles": {
+    "studio": {
+      "allow": [
+        "canvas.read",
+        "palette.write"
+      ],
+      "deny": []
+    },
+    "kiosk": {
+      "allow": [
+        "canvas.read",
+        "palette.write"
+      ],
+      "deny": [
+        "palette.write"
+      ]
+    }
+  },
+  "defaults": {
+    "appearance": {
+      "contrast": "normal",
+      "scale": 100,
+      "show_grid": true
+    },
+    "recent_limit": 10,
+    "pinned": [
+      "inkframe"
+    ],
+    "telemetry": false
+  },
+  "locked": {
+    "telemetry": false,
+    "appearance": {
+      "contrast": "high"
+    }
+  },
+  "snapshot_limits": {
+    "max_bytes": 800,
+    "allowed_roots": [
+      "logs/",
+      "state/"
+    ],
+    "allowed_categories": [
+      "diagnostic",
+      "settings"
+    ],
+    "excluded_paths": [
+      "state/session.json"
+    ]
+  },
+  "snapshot_files": [
+    {
+      "path": "logs/startup.txt",
+      "category": "diagnostic",
+      "bytes": 120,
+      "content": "Renderer ready; extension catalog loaded."
+    },
+    {
+      "path": "logs/crash.txt",
+      "category": "diagnostic",
+      "bytes": 260,
+      "content": "Saved DEMO trace: palette missing on old display."
+    },
+    {
+      "path": "state/preferences.json",
+      "category": "settings",
+      "bytes": 180,
+      "content": "{\"contrast\":\"high\",\"scale\":100}"
+    },
+    {
+      "path": "state/session.json",
+      "category": "settings",
+      "bytes": 90,
+      "content": "DEMO session material, never in support preview"
+    },
+    {
+      "path": "notes/private.txt",
+      "category": "personal",
+      "bytes": 70,
+      "content": "Fictional personal notes, not support evidence"
+    }
+  ],
+  "mobile_inventory": [
+    {
+      "domain": "file",
+      "path": "catalog/cards.json",
+      "bytes": 80
+    },
+    {
+      "domain": "file",
+      "path": "catalog/private/key.json",
+      "bytes": 32
+    },
+    {
+      "domain": "sharedpref",
+      "path": "appearance.xml",
+      "bytes": 40
+    },
+    {
+      "domain": "sharedpref",
+      "path": "session.xml",
+      "bytes": 22
+    },
+    {
+      "domain": "database",
+      "path": "catalog.db",
+      "bytes": 160
+    },
+    {
+      "domain": "cache",
+      "path": "thumbnails/x.png",
+      "bytes": 200
+    }
+  ]
+}

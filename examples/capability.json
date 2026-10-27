@@ -1,0 +1,6 @@
+{
+  "action": "capability",
+  "extension_id": "inkframe",
+  "profile": "studio",
+  "capability": "palette.write"
+}
